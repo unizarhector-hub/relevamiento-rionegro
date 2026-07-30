@@ -23,7 +23,7 @@ body{
   margin:0;
   background:var(--cream);
   color:var(--ink);
-  font-family:\'Barlow\',system-ui,sans-serif;
+  font-family:'Barlow',system-ui,sans-serif;
 }
 .wrap{max-width:820px;margin:0 auto;padding:0 32px 80px;}
 
@@ -36,12 +36,12 @@ body{
 .letterhead-img{height:78px;width:auto;display:block;}
 
 .eyebrow{
-  font-family:\'Barlow Condensed\',sans-serif;
+  font-family:'Barlow Condensed',sans-serif;
   font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
   font-size:12.5px;color:var(--green);margin:0 0 10px;
 }
 h1{
-  font-family:\'Barlow Condensed\',sans-serif;
+  font-family:'Barlow Condensed',sans-serif;
   font-weight:700;font-size:40px;line-height:1.05;
   margin:0 0 14px;letter-spacing:-0.3px;
 }
@@ -61,25 +61,38 @@ h1 em{font-style:normal;color:var(--green);}
 .card{
   display:flex;flex-direction:column;gap:10px;
   background:var(--white);border:1.5px solid var(--line);border-radius:var(--radius);
-  padding:24px 22px;text-decoration:none;color:var(--ink);
-  transition:border-color .15s, background .15s;
+  padding:22px 22px 20px;color:var(--ink);
+  transition:border-color .15s;
 }
-.card:hover{border-color:var(--green);background:var(--green-fill);}
+.card:hover{border-color:var(--green);}
 .card .num{
-  font-family:\'Barlow Condensed\',sans-serif;font-weight:700;font-size:13px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
   color:var(--white);background:var(--green);
   width:26px;height:26px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
 }
 .card .title{
-  font-family:\'Barlow Condensed\',sans-serif;font-weight:700;font-size:22px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;
   color:var(--ink);letter-spacing:0.2px;
 }
-.card .desc{font-size:13px;color:var(--ink-soft);line-height:1.45;}
-.card .arrow{
-  margin-top:auto;font-family:\'Barlow Condensed\',sans-serif;font-weight:600;
-  font-size:13px;color:var(--green-dark);letter-spacing:0.3px;
+.card .desc{font-size:13px;color:var(--ink-soft);line-height:1.45;margin-bottom:4px;}
+.card-actions{
+  margin-top:auto;display:flex;flex-direction:column;gap:8px;padding-top:6px;
 }
+.btn-action{
+  display:block;text-align:center;text-decoration:none;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13.5px;
+  letter-spacing:0.2px;border-radius:4px;padding:9px 10px;
+  transition:background .15s, border-color .15s;
+}
+.btn-primary{
+  background:var(--green);color:var(--white);border:1px solid var(--green);
+}
+.btn-primary:hover{background:var(--green-dark);border-color:var(--green-dark);}
+.btn-secondary{
+  background:var(--white);color:var(--green-dark);border:1px solid var(--line);
+}
+.btn-secondary:hover{background:var(--green-fill);border-color:var(--green);}
 
 .footer-note{
   margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
@@ -100,36 +113,48 @@ h1 em{font-style:normal;color:var(--green);}
   <hr class="rule">
 
   <div class="grid">
-    <a class="card" href="https://forms.gle/X6QGK5XFdxe31toa8" target="_blank" rel="noopener">
+    <div class="card">
       <span class="num">1</span>
       <span class="title">Empleo</span>
       <span class="desc">Nómina de trabajadores del proyecto: datos personales, categoría, modalidad contractual y situación laboral.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
+      <div class="card-actions">
+        <a class="btn-action btn-primary" href="https://forms.gle/X6QGK5XFdxe31toa8" target="_blank" rel="noopener">Completar formulario →</a>
+        <a class="btn-action btn-secondary" href="https://drive.google.com/drive/folders/1p0VfN4hWyU3_SNCfrAGHlJSDNbI05QhT?usp=drive_link" target="_blank" rel="noopener">Subir Excel completo →</a>
+      </div>
+    </div>
 
-    <a class="card" href="https://forms.gle/aMovjJD1vKPPPHXS7" target="_blank" rel="noopener">
+    <div class="card">
       <span class="num">2</span>
       <span class="title">Proveedores</span>
       <span class="desc">Proveedores y contratistas del período: origen, rubro, tipo y monto contratado.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
+      <div class="card-actions">
+        <a class="btn-action btn-primary" href="https://forms.gle/aMovjJD1vKPPPHXS7" target="_blank" rel="noopener">Completar formulario →</a>
+        <a class="btn-action btn-secondary" href="https://drive.google.com/drive/folders/1VNDSOmzKVJCMV3pFBHZy3Vy4MGlt-riP?usp=drive_link" target="_blank" rel="noopener">Subir Excel completo →</a>
+      </div>
+    </div>
 
-    <a class="card" href="https://forms.gle/VSpLxbmkodpj3aeV9" target="_blank" rel="noopener">
+    <div class="card">
       <span class="num">3</span>
       <span class="title">Licitaciones</span>
       <span class="desc">Procesos de contratación y licitación: estado de avance, proveedores invitados y adjudicación.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
+      <div class="card-actions">
+        <a class="btn-action btn-primary" href="https://forms.gle/VSpLxbmkodpj3aeV9" target="_blank" rel="noopener">Completar formulario →</a>
+        <a class="btn-action btn-secondary" href="https://drive.google.com/drive/folders/1YaKFfd74g7NzR2h9LwejF5JTLkuSx9cS?usp=drive_link" target="_blank" rel="noopener">Subir Excel completo →</a>
+      </div>
+    </div>
 
-    <a class="card" href="https://forms.gle/sF6FXLYpFiGZB3CJ6" target="_blank" rel="noopener">
+    <div class="card">
       <span class="num">4</span>
       <span class="title">Postulantes</span>
       <span class="desc">Seguimiento de postulantes prioritarios: entrevistas, preocupacional y resultado del proceso.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
+      <div class="card-actions">
+        <a class="btn-action btn-primary" href="https://forms.gle/sF6FXLYpFiGZB3CJ6" target="_blank" rel="noopener">Completar formulario →</a>
+        <a class="btn-action btn-secondary" href="https://drive.google.com/drive/folders/1WtalnB_mZQZQKpQYb9PIoxmD9Rxc7KvN?usp=drive_link" target="_blank" rel="noopener">Subir Excel completo →</a>
+      </div>
+    </div>
   </div>
 
-  <p class="footer-note">Cada bloque abre un formulario de Google en una pestaña nueva. Completá los datos de tu empresa dentro de cada formulario correspondiente al período informado.</p>
+  <p class="footer-note">Cada bloque tiene dos opciones: completar el formulario de Google campo por campo, o subir directamente un archivo Excel ya completo a la carpeta de Drive correspondiente, si tu empresa ya lo armó internamente. Ambas abren en una pestaña nueva.</p>
 
 </div>
 </body>
