@@ -61,10 +61,10 @@ h1 em{font-style:normal;color:var(--green);}
 .card{
   display:flex;flex-direction:column;gap:10px;
   background:var(--white);border:1.5px solid var(--line);border-radius:var(--radius);
-  padding:24px 22px;text-decoration:none;color:var(--ink);
-  transition:border-color .15s, background .15s;
+  padding:22px 22px 20px;color:var(--ink);
+  transition:border-color .15s;
 }
-.card:hover{border-color:var(--green);background:var(--green-fill);}
+.card:hover{border-color:var(--green);}
 .card .num{
   font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
   color:var(--white);background:var(--green);
@@ -75,10 +75,43 @@ h1 em{font-style:normal;color:var(--green);}
   font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;
   color:var(--ink);letter-spacing:0.2px;
 }
-.card .desc{font-size:13px;color:var(--ink-soft);line-height:1.45;}
-.card .arrow{
-  margin-top:auto;font-family:'Barlow Condensed',sans-serif;font-weight:600;
-  font-size:13px;color:var(--green-dark);letter-spacing:0.3px;
+.card .desc{font-size:13px;color:var(--ink-soft);line-height:1.45;margin-bottom:4px;}
+.card-actions{
+  margin-top:auto;display:flex;flex-direction:column;gap:8px;padding-top:6px;
+}
+.btn-action{
+  display:block;text-align:center;text-decoration:none;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13.5px;
+  letter-spacing:0.2px;border-radius:4px;padding:9px 10px;
+  transition:background .15s, border-color .15s;
+}
+.btn-primary{
+  background:var(--green);color:var(--white);border:1px solid var(--green);
+}
+.btn-primary:hover{background:var(--green-dark);border-color:var(--green-dark);}
+.btn-secondary{
+  background:var(--white);color:var(--green-dark);border:1px solid var(--line);
+}
+.btn-secondary:hover{background:var(--green-fill);border-color:var(--green);}
+
+.instructivo{
+  display:flex;align-items:center;gap:12px;
+  background:var(--green-fill);border:1px solid var(--green);border-radius:var(--radius);
+  padding:14px 18px;margin-bottom:24px;text-decoration:none;
+}
+.instructivo .icon{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
+  color:var(--white);background:var(--green-dark);
+  width:30px;height:30px;border-radius:50%;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;
+}
+.instructivo .text{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;
+  color:var(--green-dark);
+}
+.instructivo .sub{
+  font-family:'Barlow',sans-serif;font-weight:400;font-size:12px;
+  color:var(--ink-soft);display:block;margin-top:1px;
 }
 
 .footer-note{
@@ -99,37 +132,47 @@ h1 em{font-style:normal;color:var(--green);}
   <p class="lede">Elegí el bloque que corresponda y completá el formulario de Google con la información de tu empresa. Los datos cargados alimentan los indicadores provinciales de empleo local y desarrollo de proveedores.</p>
   <hr class="rule">
 
+  <a class="instructivo" href="https://www.canva.com/design/DAHRnsf2lQQ/FIF_19Mz3_5czymDG-v35w/view?utm_content=DAHRnsf2lQQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6dea63969a" target="_blank" rel="noopener">
+    <span class="icon">i</span>
+    <span>
+      <span class="text">Instructivos Secretaría de Minería</span>
+      <span class="sub">Guía paso a paso para completar los formularios correctamente</span>
+    </span>
+  </a>
+
   <div class="grid">
-    <a class="card" href="https://forms.gle/X6QGK5XFdxe31toa8" target="_blank" rel="noopener">
+    <div class="card">
       <span class="num">1</span>
       <span class="title">Empleo</span>
       <span class="desc">Nómina de trabajadores del proyecto: datos personales, categoría, modalidad contractual y situación laboral.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
+      <div class="card-actions">
+        <a class="btn-action btn-primary" href="https://forms.gle/X6QGK5XFdxe31toa8" target="_blank" rel="noopener">Completar formulario →</a>
+        <a class="btn-action btn-secondary" href="plantillas/Plantilla_Empleo.xlsx" download>Descargar plantilla →</a>
+      </div>
+    </div>
 
-    <a class="card" href="https://forms.gle/aMovjJD1vKPPPHXS7" target="_blank" rel="noopener">
+    <div class="card">
       <span class="num">2</span>
       <span class="title">Proveedores</span>
       <span class="desc">Proveedores y contratistas del período: origen, rubro, tipo y monto contratado.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
+      <div class="card-actions">
+        <a class="btn-action btn-primary" href="https://forms.gle/aMovjJD1vKPPPHXS7" target="_blank" rel="noopener">Completar formulario →</a>
+        <a class="btn-action btn-secondary" href="plantillas/Plantilla_Proveedores.xlsx" download>Descargar plantilla →</a>
+      </div>
+    </div>
 
-    <a class="card" href="https://forms.gle/VSpLxbmkodpj3aeV9" target="_blank" rel="noopener">
+    <div class="card">
       <span class="num">3</span>
       <span class="title">Licitaciones</span>
       <span class="desc">Procesos de contratación y licitación: estado de avance, proveedores invitados y adjudicación.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
-
-    <a class="card" href="https://forms.gle/sF6FXLYpFiGZB3CJ6" target="_blank" rel="noopener">
-      <span class="num">4</span>
-      <span class="title">Postulantes</span>
-      <span class="desc">Seguimiento de postulantes prioritarios: entrevistas, preocupacional y resultado del proceso.</span>
-      <span class="arrow">Completar formulario →</span>
-    </a>
+      <div class="card-actions">
+        <a class="btn-action btn-primary" href="https://forms.gle/VSpLxbmkodpj3aeV9" target="_blank" rel="noopener">Completar formulario →</a>
+        <a class="btn-action btn-secondary" href="plantillas/Plantilla_Licitaciones.xlsx" download>Descargar plantilla →</a>
+      </div>
+    </div>
   </div>
 
-  <p class="footer-note">Cada bloque abre un formulario de Google en una pestaña nueva. Completá los datos de tu empresa dentro de cada formulario correspondiente al período informado.</p>
+  <p class="footer-note">Cada bloque tiene dos opciones: completar el formulario de Google directamente, o descargar la plantilla en Excel para completarla internamente y subirla luego. Revisá el instructivo de arriba si tenés dudas sobre cómo completar cada campo.</p>
 
 </div>
 </body>
