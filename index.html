@@ -1315,16 +1315,10 @@ th{background:var(--rn-blue)}
 <button aria-selected="false" class="tab" data-target="proveedores" role="tab"><span class="tab-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect height="14" rx="2" width="20" x="2" y="6"></rect><path d="M12 12h.01"></path><path d="M2 11h20"></path></svg></span><span class="tab-title">Carga Proveedores</span></button>
 <button aria-selected="false" class="tab" data-target="licitaciones" role="tab"><span class="tab-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="4" rx="1" width="8" x="8" y="2"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></span><span class="tab-title">Carga Licitaciones</span></button>
 </div>
-<p class="helper" id="helper">Seleccioná un instructivo para ver el detalle de carga.</p>
+
 </div>
 <div class="content-shell" id="contentShell">
-<div class="placeholder" id="placeholder">
-<div class="placeholder-inner">
-<div class="placeholder-icon"><svg viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg></div>
-<h2>Elegí un instructivo</h2>
-<p>Consultá criterios, campos y modalidad de presentación.</p>
-</div>
-</div>
+<div class="placeholder" id="placeholder"></div>
 <!-- EMPLEO -->
 <!-- RECLUTAMIENTO -->
 <!-- PROVEEDORES -->
@@ -1423,7 +1417,7 @@ function selectTab(tab,scroll=false){
   });
   panels.forEach(p=>p.classList.toggle('visible',p.id===id));
   placeholder.style.display='none';
-  helper.textContent='Usá el índice lateral para recorrer el instructivo o cerrarlo cuando termines.';
+  if(helper) helper.textContent='Usá el índice lateral para recorrer el instructivo o cerrarlo cuando termines.';
   updateSidebarActive();
   if(scroll && window.innerWidth<700){
     contentShell.scrollIntoView({behavior:'smooth',block:'start'});
@@ -1437,7 +1431,7 @@ function closeInstruction(scroll=true){
   });
   panels.forEach(p=>p.classList.remove('visible'));
   placeholder.style.display='flex';
-  helper.textContent='Seleccioná un instructivo para ver el detalle de carga.';
+  if(helper) helper.textContent='Seleccioná un instructivo para ver el detalle de carga.';
   if(scroll){
     tabsWrap.scrollIntoView({behavior:'smooth',block:'start'});
   }
@@ -1579,10 +1573,6 @@ document.addEventListener('keydown',event=>{
     if(activeTab) activeTab.focus();
   }
 });
-
-if(tabs.length){
-  selectTab(tabs[0]);
-}
 
 </script>
 <script data-scroll-top="true">
