@@ -731,7 +731,6 @@ th{background:var(--rn-blue)}
 }
 .action-end svg{width:16px;height:16px}
 .action-card:hover .action-end{color:var(--rn-blue)!important}
-.action-download .action-icon{background:var(--blue-50)!important;color:var(--rn-blue)!important}
 
 .action-disabled{
   background:var(--gray-50)!important;
@@ -808,7 +807,455 @@ th{background:var(--rn-blue)}
   .hero-inner{padding-top:36px;padding-bottom:30px}
   .hero-lawline{font-size:12.5px}
 }
-</style></head>
+</style>
+<style id="confidencialidad-legal">
+/* Bloque legal · Secreto Estadístico */
+.legal-note{
+  background:#f5f6f5;
+  border-top:1px solid var(--border-subtle);
+  padding:42px 20px;
+}
+.legal-note-inner{
+  max-width:1200px;
+  margin:0 auto;
+  border:1px solid var(--gray-200);
+  border-left:5px solid var(--rn-green);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(18,19,18,.06);
+  padding:26px 28px;
+}
+.legal-note-head{
+  display:grid;
+  grid-template-columns:48px minmax(0,1fr);
+  gap:15px;
+  align-items:center;
+  padding-bottom:18px;
+  margin-bottom:18px;
+  border-bottom:1px solid var(--border-subtle);
+}
+.legal-note-icon{
+  width:48px;
+  height:48px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:var(--green-50);
+  color:var(--green-700);
+}
+.legal-note-icon svg{
+  width:25px;
+  height:25px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.legal-note-kicker{
+  margin:0 0 3px;
+  color:var(--rn-blue);
+  font-size:11.5px;
+  font-weight:820;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.legal-note h2{
+  margin:0;
+  color:var(--text-strong);
+  font-size:clamp(22px,2.4vw,28px);
+  line-height:1.15;
+  letter-spacing:-.02em;
+  font-weight:820;
+}
+.legal-note p{
+  margin:0 0 14px;
+  max-width:1040px;
+  color:var(--gray-700);
+  font-size:14.5px;
+  line-height:1.62;
+}
+.legal-note strong{color:var(--text-strong)}
+.legal-note-law{
+  padding:14px 16px;
+  margin:0 0 18px;
+  border-radius:11px;
+  background:var(--blue-50);
+  border:1px solid var(--blue-100);
+  color:var(--gray-700);
+}
+.legal-note-law strong{color:var(--rn-blue)}
+.legal-note-list{
+  display:grid;
+  gap:10px;
+  margin:14px 0 18px;
+  padding:0;
+  list-style:none;
+}
+.legal-note-list li{
+  position:relative;
+  margin:0;
+  padding:12px 14px 12px 42px;
+  border:1px solid var(--border-subtle);
+  border-radius:11px;
+  background:var(--gray-25);
+  color:var(--gray-700);
+  font-size:14px;
+  line-height:1.55;
+}
+.legal-note-list li:before{
+  content:"✓";
+  position:absolute;
+  left:14px;
+  top:12px;
+  width:19px;
+  height:19px;
+  display:grid;
+  place-items:center;
+  border-radius:6px;
+  background:var(--green-100);
+  color:var(--green-700);
+  font-size:12px;
+  font-weight:850;
+}
+.legal-note-sanctions{
+  margin:0!important;
+  padding:13px 15px;
+  border-radius:11px;
+  border:1px solid #e4e4e4;
+  background:#fafafa;
+  color:var(--gray-700)!important;
+  font-size:13.5px!important;
+}
+@media(max-width:560px){
+  .legal-note{padding:28px 14px}
+  .legal-note-inner{padding:20px 17px;border-left-width:4px}
+  .legal-note-head{grid-template-columns:42px minmax(0,1fr);gap:12px}
+  .legal-note-icon{width:42px;height:42px}
+  .legal-note p{font-size:14px}
+}
+@media print{
+  .legal-note{padding:22px 0;background:#fff}
+  .legal-note-inner{box-shadow:none;break-inside:avoid}
+}
+</style>
+
+<style id="navegacion-instructivos-v2">
+/* Navegación lateral persistente + cierre de instructivos */
+:root{--instruction-sticky-top:88px}
+
+/* Permite que position:sticky funcione dentro del instructivo. */
+.content-shell{overflow:visible}
+.instruction{scroll-margin-top:var(--instruction-sticky-top)}
+.instruction .section{scroll-margin-top:calc(var(--instruction-sticky-top) + 8px)}
+
+.instruction-layout{
+  display:grid;
+  grid-template-columns:238px minmax(0,1fr);
+  align-items:start;
+  gap:0;
+  min-width:0;
+}
+
+.instruction-content{
+  min-width:0;
+  border-left:1px solid var(--border-subtle);
+}
+
+.instruction-sidebar{
+  position:sticky;
+  top:var(--instruction-sticky-top);
+  align-self:start;
+  display:flex;
+  flex-direction:column;
+  max-height:calc(100vh - var(--instruction-sticky-top) - 16px);
+  padding:22px 18px 18px;
+  background:#fff;
+  z-index:15;
+}
+
+.instruction-index{
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+}
+
+.instruction-index-head{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:13px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--border-subtle);
+  color:var(--text-muted);
+  font-size:11.5px;
+  font-weight:820;
+  letter-spacing:.075em;
+  text-transform:uppercase;
+}
+
+.instruction-index-head svg{
+  width:17px;
+  height:17px;
+  flex:none;
+  fill:none;
+  stroke:var(--rn-blue);
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.instruction-index-links{
+  display:grid;
+  gap:6px;
+  overflow:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  padding-right:2px;
+}
+
+.instruction-index-link{
+  display:grid;
+  grid-template-columns:24px minmax(0,1fr);
+  align-items:start;
+  gap:8px;
+  width:100%;
+  padding:8px 9px;
+  border:1px solid transparent;
+  border-radius:9px;
+  background:transparent;
+  color:var(--gray-600);
+  font-size:12.5px;
+  line-height:1.32;
+  font-weight:650;
+  text-decoration:none;
+  transition:border-color .14s var(--ease),background .14s var(--ease),color .14s var(--ease);
+}
+
+.instruction-index-link:hover,
+.instruction-index-link.is-active{
+  border-color:var(--blue-100);
+  background:var(--blue-50);
+  color:var(--rn-blue);
+}
+
+.instruction-index-link:focus-visible{
+  outline:3px solid rgba(0,123,224,.18);
+  outline-offset:2px;
+}
+
+.instruction-index-number{
+  display:grid;
+  place-items:center;
+  width:24px;
+  height:24px;
+  border-radius:7px;
+  background:var(--green-50);
+  color:var(--green-700);
+  font-size:10.5px;
+  line-height:1;
+  font-weight:850;
+  flex:none;
+}
+
+.instruction-index-link.index-home .instruction-index-number{
+  background:var(--blue-50);
+  color:var(--rn-blue);
+}
+
+.close-instruction{
+  width:100%;
+  min-height:42px;
+  margin-top:16px;
+  border:1px solid var(--gray-300);
+  border-radius:9px;
+  background:var(--rn-black);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  padding:10px 11px;
+  font:inherit;
+  font-size:12.5px;
+  line-height:1.15;
+  font-weight:720;
+  cursor:pointer;
+  transition:border-color .14s var(--ease),background .14s var(--ease),transform .14s var(--ease);
+}
+
+.close-instruction svg{
+  width:16px;
+  height:16px;
+  flex:none;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.close-instruction:hover{
+  border-color:var(--rn-black);
+  background:#242424;
+  transform:translateY(-1px);
+}
+
+.close-instruction:focus-visible{
+  outline:3px solid rgba(106,198,79,.30);
+  outline-offset:2px;
+}
+
+/* El encabezado y el cuerpo ahora viven en la columna de contenido. */
+.instruction-content .inst-head{
+  border-top-right-radius:20px;
+}
+.instruction-content .inst-body{
+  border-bottom-right-radius:20px;
+}
+
+@media(max-width:980px){
+  .instruction-layout{grid-template-columns:210px minmax(0,1fr)}
+  .instruction-sidebar{padding-left:14px;padding-right:14px}
+}
+
+/* En móvil conserva la persistencia, pero evita quitar ancho al contenido. */
+@media(max-width:760px){
+  .instruction-layout{display:block}
+  .instruction-content{border-left:none}
+  .instruction-sidebar{
+    top:var(--instruction-sticky-top);
+    max-height:none;
+    padding:10px 12px;
+    border-bottom:1px solid var(--border-subtle);
+    box-shadow:0 5px 14px rgba(18,19,18,.07);
+  }
+  .instruction-index{display:block}
+  .instruction-index-head{display:none}
+  .instruction-index-links{
+    display:flex;
+    gap:7px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:0 0 2px;
+    scrollbar-width:none;
+  }
+  .instruction-index-links::-webkit-scrollbar{display:none}
+  .instruction-index-link{
+    display:inline-flex;
+    align-items:center;
+    width:auto;
+    min-width:max-content;
+    padding:7px 9px;
+    border-color:var(--gray-200);
+    background:#fff;
+    white-space:nowrap;
+  }
+  .instruction-index-number{width:21px;height:21px}
+  .instruction-sidebar .close-instruction{
+    margin-top:8px;
+    min-height:38px;
+  }
+}
+
+@media print{
+  .instruction-layout{display:block}
+  .instruction-sidebar{display:none!important}
+  .instruction-content{border-left:none}
+}
+</style>
+
+
+<style id="legal-note-compact-superior">
+/* Información legal compacta, ubicada antes de las cuatro ventanas */
+.main > .legal-note{
+  margin:0 0 24px;
+  padding:0;
+  background:transparent;
+  border-top:none;
+}
+.main > .legal-note .legal-note-inner{
+  max-width:none;
+  margin:0;
+  padding:16px 18px;
+  border-radius:12px;
+  border:1px solid var(--gray-200);
+  border-left:4px solid var(--rn-green);
+  box-shadow:none;
+  background:#fafbfa;
+}
+.main > .legal-note .legal-note-head{
+  grid-template-columns:34px minmax(0,1fr);
+  gap:11px;
+  padding-bottom:11px;
+  margin-bottom:11px;
+}
+.main > .legal-note .legal-note-icon{
+  width:34px;
+  height:34px;
+  border-radius:9px;
+}
+.main > .legal-note .legal-note-icon svg{width:18px;height:18px}
+.main > .legal-note .legal-note-kicker{
+  font-size:10px;
+  margin-bottom:2px;
+}
+.main > .legal-note h2{
+  font-size:17px;
+  line-height:1.2;
+  letter-spacing:-.01em;
+}
+.main > .legal-note p{
+  max-width:none;
+  margin-bottom:9px;
+  font-size:12.5px;
+  line-height:1.48;
+}
+.main > .legal-note .legal-note-law{
+  padding:10px 12px;
+  margin-bottom:11px;
+  border-radius:9px;
+  background:#fff;
+  border-color:var(--gray-200);
+}
+.main > .legal-note .legal-note-list{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin:9px 0 11px;
+}
+.main > .legal-note .legal-note-list li{
+  padding:9px 10px 9px 34px;
+  border-radius:9px;
+  background:#fff;
+  font-size:11.8px;
+  line-height:1.42;
+}
+.main > .legal-note .legal-note-list li:before{
+  left:10px;
+  top:9px;
+  width:17px;
+  height:17px;
+  font-size:10px;
+}
+.main > .legal-note .legal-note-sanctions{
+  padding:9px 11px;
+  font-size:11.8px!important;
+  line-height:1.45;
+  background:#fff;
+}
+@media(max-width:800px){
+  .main > .legal-note .legal-note-list{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .main > .legal-note{margin-bottom:18px}
+  .main > .legal-note .legal-note-inner{padding:14px 14px}
+  .main > .legal-note .legal-note-head{grid-template-columns:30px minmax(0,1fr)}
+  .main > .legal-note .legal-note-icon{width:30px;height:30px}
+  .main > .legal-note h2{font-size:15.5px}
+  .main > .legal-note p{font-size:12px}
+}
+</style>
+</head>
 <body id="top">
 <div class="topbar">
 <div class="topbar-inner"><strong>Gobierno de Río Negro</strong><div class="topbar-links"><span>Secretaría de Energía y Ambiente</span><span>Secretaría de Minería</span></div></div>
@@ -827,6 +1274,37 @@ th{background:var(--rn-blue)}
 </div>
 </section>
 <main class="main">
+<section class="legal-note" aria-labelledby="legal-note-title">
+  <div class="legal-note-inner">
+    <div class="legal-note-head">
+      <div class="legal-note-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3v18"></path>
+          <path d="M5 6h14"></path>
+          <path d="m7 6-4 7h8L7 6Z"></path>
+          <path d="m17 6-4 7h8l-4-7Z"></path>
+          <path d="M8 21h8"></path>
+        </svg>
+      </div>
+      <div>
+        <div class="legal-note-kicker">Información legal</div>
+        <h2 id="legal-note-title">Nota de confidencialidad de la información / Secreto Estadístico</h2>
+      </div>
+    </div>
+
+    <p class="legal-note-law">La información cargada en esta plataforma (licitaciones, empleados y proveedores) por parte de productores mineros, petroleros y gasíferos reviste el carácter de <strong>declaración jurada</strong> y está amparada por el <strong>secreto estadístico establecido en el Artículo 9° de la Ley E N° 10 de la Provincia de Río Negro.</strong></p>
+
+    <p><strong>En consecuencia, la Secretaría de Minería se compromete a:</strong></p>
+    <ul class="legal-note-list">
+      <li>Utilizar los datos recibidos exclusivamente con fines estadísticos y de gestión, en compilaciones de conjunto que no permitan identificar a la persona física o jurídica declarante.</li>
+      <li>No suministrar las declaraciones individuales a ningún organismo público, poder del Estado ni a particulares, sin el consentimiento previo y por escrito del interesado.</li>
+      <li>Resguardar el secreto comercial, privado y patrimonial de la información suministrada, conforme a la normativa vigente.</li>
+    </ul>
+
+    <p class="legal-note-sanctions">El incumplimiento de este resguardo por parte del personal interviniente da lugar a las sanciones administrativas, civiles y penales previstas en los <strong>Artículos 22 y 23 de la mencionada ley.</strong></p>
+  </div>
+</section>
+
 <div class="tabs-wrap">
 <div aria-label="Instructivos disponibles" class="tabs" role="tablist">
 <button aria-selected="false" class="tab" data-target="empleo" role="tab"><span class="tab-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><span class="tab-title">Carga Empleo</span></button>
@@ -849,19 +1327,19 @@ th{background:var(--rn-blue)}
 <!-- PROVEEDORES -->
 <!-- LICITACIONES -->
 <article class="instruction" id="empleo" role="tabpanel">
-<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Empleo</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I | Ley Provincial Nº 5804 y Decreto Reglamentario Nº 1068/2025</div></div><div class="inst-actions"><a class="action-card action-primary" href="https://forms.gle/X6QGK5XFdxe31toa8" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Completar en línea</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><a class="action-card action-download" href="Empleos.xlsx" download><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg></span><span class="action-copy"><strong>Excel</strong><small>Descargar plantilla</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button></div></div></div>
+<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Empleo</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I | Ley Provincial Nº 5804 y Decreto Reglamentario Nº 1068/2025</div></div><div class="inst-actions"><a class="action-card action-primary" href="https://forms.gle/X6QGK5XFdxe31toa8" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Completar en línea</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><a class="action-card action-secondary" href="https://docs.google.com/spreadsheets/d/1Irg1m65PPJ_RPirsTehIC7Edeqav37Bk/edit" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14a2 2 0 0 0 2-2v-3"></path><path d="M3 16v3a2 2 0 0 0 2 2"></path></svg></span><span class="action-copy"><strong>Planilla</strong><small>Abrir planilla compartida</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button></div></div></div>
 <div class="inst-body">
 <div class="key-wrap"><div class="key-wrap-title">Puntos clave de presentación</div><div class="key-grid"><div class="key-card blue"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><div><div class="key-label">Periodicidad</div><p>La presentación de la planilla deberá realizarse con periodicidad trimestral. No obstante, la información correspondiente a cada trimestre deberá consignarse desagregada por mes. En cada entrega se consignarán los datos correspondientes al mes y año informados.</p></div></div><div class="key-card green"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3 2.8 19h18.4L12 3Z"></path><path d="M12 9v4M12 16.5h.01"></path></svg></div><div><div class="key-label">Presentación obligatoria</div><p>La opción “CARGAR: NO” indica únicamente que no se adjuntará nuevamente la planilla completa; no significa que la empresa quede exceptuada de efectuar la presentación correspondiente al período.</p></div></div></div></div>
 <section class="section"><div class="section-header"><div class="section-num">1</div><div class="section-heading"><div class="section-title-text">Consideraciones generales</div><div class="section-subtitle">Periodicidad, alcance y modalidad de presentación.</div></div></div>
-<p>Cada fila deberá corresponder a una persona trabajadora vinculada con la empresa operadora y el proyecto durante el período informado.</p><p>Deberán evitarse registros duplicados de una misma persona dentro del mismo proyecto y período. Cuando una persona se encuentre afectada a más de un proyecto o etapa, se utilizarán filas separadas únicamente si la asignación puede identificarse sin duplicar la información salarial.</p><p>Deberán utilizarse las opciones previstas en la planilla, sin modificar la estructura, denominación</p><p>La información suministrada tendrá carácter de declaración jurada y podrá ser revisada, verificada o auditada por la Autoridad de Aplicación. La empresa deberá conservar la documentación laboral y registral que respalde los datos informados.</p>
+<p>Cada fila deberá corresponder a una persona trabajadora vinculada con la empresa operadora y el proyecto durante el período informado.</p><p>Deberán evitarse registros duplicados de una misma persona dentro del mismo proyecto y período. Cuando una persona se encuentre afectada a más de un proyecto o etapa, se utilizarán filas separadas únicamente si la asignación puede identificarse sin duplicar la información salarial.</p><p>Deberán utilizarse las opciones previstas en la planilla, sin modificar la estructura, denominación</p><p>La información suministrada podrá ser revisada, verificada o auditada por la Autoridad de Aplicación. La empresa deberá conservar la documentación laboral y registral que respalde los datos informados.</p>
 <div class="callout info"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3 2.8 19h18.4L12 3Z"></path><path d="M12 9v4M12 16.5h.01"></path></svg><div><strong>Modalidad de presentación</strong><p>ACLARACIÓN: Modalidad de presentación. En la primera presentación correspondiente a cada proyecto, la empresa deberá seleccionar la opción “CARGAR: SÍ” y adjuntar la planilla “Empleo” completa, con la totalidad de las personas trabajadoras vinculadas al proyecto durante el período informado, incluyendo al personal de la empresa operadora y de sus contratistas.</p><p>A partir del período mensual siguiente, deberá seleccionar “CARGAR: NO” e informar directamente en el formulario las altas, bajas y demás modificaciones producidas respecto de la nómina inicial.</p></div></div>
-<p>Resguardo y difusión de la información. La información individual suministrada por las empresas será resguardada por la Autoridad de Aplicación y utilizada para las tareas de relevamiento, seguimiento, verificación y control previstas en la normativa vigente. Los resultados que se difundan o publiquen se presentarán únicamente en forma agregada o mediante compilaciones de conjunto, de modo que no resulte posible identificar, directa o indirectamente, a las personas trabajadoras ni revelar información personal, laboral o patrimonial.</p><p>El tratamiento y la difusión de los datos se realizará en concordancia con el artículo 9º de la Ley Provincial E Nº 10 y la Ley Nacional Nº 25.326 de Protección de los Datos Personales.</p>
+
 </section>
 <section class="section"><div class="section-header"><div class="section-num">2</div><div class="section-heading"><div class="section-title-text">Instrucciones para completar cada campo</div><div class="section-subtitle">Detalle de los datos requeridos en la planilla.</div></div></div>
 <div class="fields"><div class="field"><div class="field-name">Empresa y tipo de empresa</div><div class="field-text">consignar la razón social completa de la empresa que emplea a la persona informada, sea la operadora o una contratista, o subcontratista afectada al proyecto. A los fines de determinar el empleo directo del proyecto conforme a la Ley Provincial Nº 5804, la empresa operadora deberá informar tanto su personal propio como el personal de sus contratistas vinculados al proyecto. Se deberá mantener la misma denominación en todas las presentaciones.<div class="example-box"><span class="example-label">Ejemplo</span><div class="example-value">para el Proyecto “ABCD”, en esta columna se consignará “EMPRESA 1” para el personal propio de la operadora o “Constructora AB” para el personal dependiente de esa contratista; en ambos casos, en la columna “Proyecto” se consignará “ABCD”.</div></div></div></div><div class="field"><div class="field-name">Proyecto</div><div class="field-text">indicar la denominación oficial con la cual el proyecto se encuentra registrado o informado ante la autoridad competente.</div></div><div class="field"><div class="field-name">Etapa del proyecto</div><div class="field-text">seleccionar la etapa en la cual la persona desarrolla principalmente sus tareas durante el período informado. Las etapas incluidas en la lista desplegable contemplan las distintas industrias extractivas alcanzadas por el relevamiento. En el caso de la actividad minera, deberán seleccionarse únicamente las etapas aplicables al proyecto minero, de acuerdo con su estado de avance y con lo establecido en los artículos 50 y 51 del Código de Procedimientos Mineros de Río Negro.</div></div><div class="field"><div class="field-name">Año informado</div><div class="field-text">indicar, con cuatro dígitos, el año al cual corresponde la información.</div></div><div class="field"><div class="field-name">Período informado</div><div class="field-text">seleccionar el mes al cual corresponden los datos consignados.</div></div><div class="field"><div class="field-name">CUIL</div><div class="field-text">consignar los once dígitos, sin puntos, espacios ni guiones. El CUIL deberá utilizarse como identificador de la persona para evitar duplicaciones.</div></div><div class="field"><div class="field-name">Apellido y nombre</div><div class="field-text">consignarlos de acuerdo con el documento de identidad y los registros laborales.</div></div><div class="field"><div class="field-name">Fecha de nacimiento</div><div class="field-text">indicarla con formato día/mes/año. No deberá informarse la edad en reemplazo de la fecha.</div></div><div class="field"><div class="field-name">Domicilio real de residencia</div><div class="field-text">informar el domicilio en el cual la persona reside efectivamente. No deberá consignarse el domicilio de la empresa, el lugar de trabajo ni un alojamiento transitorio, salvo que constituya su residencia habitual.</div></div><div class="field"><div class="field-name">Localidad y Provincia de residencia</div><div class="field-text">consignar el nombre completo de la localidad correspondiente al domicilio real. Deberá indicarse también la provincia.</div></div><div class="field"><div class="field-name">Comunidad indígena</div><div class="field-text">completar este campo únicamente sobre la base de la manifestación o el autorreconocimiento de la persona. La pertenencia no deberá inferirse a partir del apellido, el domicilio u otros datos. Cuando corresponda, indicar el nombre de la comunidad.</div></div><div class="field"><div class="field-name">Género</div><div class="field-text">seleccionar la opción informada por la persona. No deberá presumirse a partir del nombre, documento u otros datos.</div></div><div class="field"><div class="field-name">Nivel educativo</div><div class="field-text">consignar el máximo nivel educativo finalizado y aprobado, no el nivel que la persona se encuentre cursando. Si una persona cursa estudios universitarios pero aún no los finalizó, deberá informar el nivel secundario o técnico completo que corresponda. Del mismo modo, un posgrado solo se informará cuando se encuentre finalizado.</div></div><div class="field"><div class="field-name">Fecha de ingreso</div><div class="field-text">consignar la fecha de ingreso que se defina para el relevamiento, utilizando el formato día/mes/año. Deberá aplicarse un criterio uniforme en todas las presentaciones.</div></div><div class="field"><div class="field-name">Categoría laboral</div><div class="field-text">seleccionar la categoría correspondiente a las tareas efectivamente desarrolladas durante el período, independientemente del título, profesión o nivel educativo de la persona. Cuando se seleccione “Otro”, deberá especificarse la función en Observaciones.</div></div><div class="field"><div class="field-name">Modalidad contractual</div><div class="field-text">seleccionar la modalidad contractual vigente durante el período. Cuando se trate de una contratación temporal, deberá elegirse la opción específica que corresponda: plazo fijo, eventual o de temporada.<p class="field-follow">Si se selecciona “Cese/Baja” deberá especificar en las columnas correspondientes, Fecha del Cese/baja y Modalidad formativa: comprende pasantías, prácticas profesionalizantes, programas de Motivo.</p><p class="field-follow">entrenamiento y cualquier otra modalidad cuyo objetivo principal sea la formación.</p></div></div><div class="field"><div class="field-name">Código de situación</div><div class="field-text">informar la situación laboral de la persona al último día del mes: activo, licencia, suspensión, reserva de puesto, siniestro u otra. Cuando se seleccione “Otro”, deberá explicarse la situación en Observaciones.</div></div><div class="field"><div class="field-name">Salario bruto</div><div class="field-text">consignar el salario bruto devengado durante el mes informado, expresado en pesos argentinos y antes de deducciones. El criterio sobre los conceptos incluidos deberá mantenerse uniforme en todos los períodos acordes a los convenios colectivos correspondientes.</div></div><div class="field"><div class="field-name">Bolsa de trabajo de procedencia / Gremio</div><div class="field-text">indicar la bolsa de trabajo, organización sindical o entidad a través de la cual se produjo la incorporación. Cuando la búsqueda haya sido realizada directamente por la empresa, consignar “Contratación directa”. Si el campo no corresponde, consignar “No aplica” y detallar en la columna Observaciones.</div></div></div>
 </section>
 </div></article><article class="instruction" id="demanda" role="tabpanel">
-<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Proyección de Demanda Laboral</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I</div></div><div class="inst-actions"><a class="action-card action-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe-BEyABjTI6_sba1kJ8ltQAOUpIzoIqHPNb_dphyem6JK97Q/viewform?usp=header" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Completar en línea</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><a class="action-card action-download" href="Proyecci%C3%B3n%20demanda%20de%20trabajo.xlsx" download><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg></span><span class="action-copy"><strong>Excel</strong><small>Descargar plantilla</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button></div></div></div>
+<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Proyección de Demanda Laboral</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I</div></div><div class="inst-actions"><span aria-disabled="true" class="action-card action-disabled"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Aún no publicado</small></span></span><a class="action-card action-secondary" href="https://docs.google.com/spreadsheets/d/1Irg1m65PPJ_RPirsTehIC7Edeqav37Bk/edit" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14a2 2 0 0 0 2-2v-3"></path><path d="M3 16v3a2 2 0 0 0 2 2"></path></svg></span><span class="action-copy"><strong>Planilla</strong><small>Abrir planilla compartida</small></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button><div class="action-status">El formulario de esta carga aún no está publicado.</div></div></div></div>
 <div class="inst-body">
 <div class="key-wrap"><div class="key-wrap-title">Puntos clave de presentación</div><div class="key-grid"><div class="key-card blue"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><div><div class="key-label">Cuándo presentar</div><p>La empresa deberá presentar la información tan pronto como cuente con una previsión de incorporación de personal. De ser posible, deberá contemplar los próximos seis (6) meses; en caso contrario, deberá informar el período que se encuentre en condiciones de anticipar, aun cuando la previsión sea preliminar y su concreción no esté confirmada. No deberá aguardarse la apertura de una convocatoria, el inicio del proceso de selección ni la confirmación definitiva de la incorporación para comunicar la demanda.</p></div></div><div class="key-card green"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 7v5h-5"></path><path d="M4 17v-5h5"></path><path d="M6.1 9A7 7 0 0 1 18 7l2 5"></path><path d="M17.9 15A7 7 0 0 1 6 17l-2-5"></path></svg></div><div><div class="key-label">Revisión obligatoria</div><p>Sin perjuicio de la comunicación anticipada, la empresa deberá revisar trimestralmente la información presentada, ratificando las proyecciones vigentes e informando las modificaciones, reprogramaciones o cancelaciones que se hubieran producido. Cuando la empresa no prevea incorporaciones de personal, deberá informarlo expresamente.</p></div></div></div></div>
 <section class="section"><div class="section-header"><div class="section-num">1</div><div class="section-heading"><div class="section-title-text">Generalidades</div><div class="section-subtitle">Finalidad, comunicación anticipada y actualización de la proyección.</div></div></div>
@@ -879,26 +1357,26 @@ th{background:var(--rn-blue)}
 <div class="subsection-header"><div class="subsection-title">3.4. Definición de las opciones del campo “Estado de la proyección”</div></div><div class="fields definition-fields"><div class="field"><div class="field-name">Preliminar</div><div class="field-text">necesidad de incorporación identificada, pero todavía sujeta a análisis o evaluación por parte de la empresa.</div></div><div class="field"><div class="field-name">Planificada</div><div class="field-text">incorporación incluida en la planificación de la empresa, aunque todavía no se encuentre confirmada definitivamente.</div></div><div class="field"><div class="field-name">Confirmada</div><div class="field-text">incorporación aprobada o definida por la empresa.</div></div><div class="field"><div class="field-name">Reprogramada</div><div class="field-text">incorporación previamente informada cuyo período estimado fue modificado.</div></div><div class="field"><div class="field-name">Cancelada</div><div class="field-text">incorporación previamente informada que la empresa ya no prevé realizar.</div></div></div>
 </section>
 </div></article><article class="instruction" id="proveedores" role="tabpanel">
-<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Proveedores</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I | Ley Provincial Nº 5805 y Decreto Reglamentario Nº 618/2026</div></div><div class="inst-actions"><a class="action-card action-primary" href="https://forms.gle/aMovjJD1vKPPPHXS7" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Completar en línea</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><a class="action-card action-download" href="Proveedores.xlsx" download><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg></span><span class="action-copy"><strong>Excel</strong><small>Descargar plantilla</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button></div></div></div>
+<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Proveedores</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I | Ley Provincial Nº 5805 y Decreto Reglamentario Nº 618/2026</div></div><div class="inst-actions"><a class="action-card action-primary" href="https://forms.gle/aMovjJD1vKPPPHXS7" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Completar en línea</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><a class="action-card action-secondary" href="https://docs.google.com/spreadsheets/d/1Irg1m65PPJ_RPirsTehIC7Edeqav37Bk/edit" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14a2 2 0 0 0 2-2v-3"></path><path d="M3 16v3a2 2 0 0 0 2 2"></path></svg></span><span class="action-copy"><strong>Planilla</strong><small>Abrir planilla compartida</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button></div></div></div>
 <div class="inst-body">
 <div class="key-wrap"><div class="key-wrap-title">Puntos clave de presentación</div><div class="key-grid"><div class="key-card blue"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><div><div class="key-label">Periodicidad</div><p>La presentación de la planilla de proveedores deberá realizarse con periodicidad trimestral y comprenderá la información correspondiente al mismo trimestre informado. En cada entrega se consignarán las contrataciones de bienes, servicios u obras correspondientes al trimestre informado.</p></div></div><div class="key-card green"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3 2.8 19h18.4L12 3Z"></path><path d="M12 9v4M12 16.5h.01"></path></svg></div><div><div class="key-label">Presentación obligatoria</div><p>La opción “CARGAR: NO” indica únicamente que no se adjuntará nuevamente la planilla completa; no significa que la empresa quede exceptuada de efectuar la presentación trimestral.</p></div></div></div></div>
 <section class="section"><div class="section-header"><div class="section-num">1</div><div class="section-heading"><div class="section-title-text">Consideraciones generales</div><div class="section-subtitle">Criterios generales de presentación y registro.</div></div></div>
-<p>La información suministrada tendrá carácter de declaración jurada, por lo que la empresa declarante será responsable de su integridad, exactitud y veracidad. La información presentada y su documentación respaldatoria podrán ser objeto de control, revisión, verificación, inspección o auditoría por parte de la Autoridad de Aplicación, que podrá requerir aclaraciones o documentación adicional.</p><p>Cada fila deberá identificar una contratación o comprobante y el proveedor correspondiente. Cuando un mismo proveedor tenga más de una contratación, preste servicios correspondientes a distintos rubros o participe en diferentes etapas del proyecto, deberá registrarse en filas separadas, evitando duplicar los montos informados.</p><p>Deberán utilizarse las opciones incluidas en las listas desplegables, sin modificar la estructura, denominación ni formato de las columnas.</p><p>El relevamiento comprende a todos los proveedores contratados durante el período, independientemente de su origen y de que se encuentren certificados o no como proveedores rionegrinos.</p>
+<p>La empresa declarante será responsable de la integridad, exactitud y veracidad de la información presentada. La información y su documentación respaldatoria podrán ser objeto de control, revisión, verificación, inspección o auditoría por parte de la Autoridad de Aplicación, que podrá requerir aclaraciones o documentación adicional.</p><p>Cada fila deberá identificar una contratación o comprobante y el proveedor correspondiente. Cuando un mismo proveedor tenga más de una contratación, preste servicios correspondientes a distintos rubros o participe en diferentes etapas del proyecto, deberá registrarse en filas separadas, evitando duplicar los montos informados.</p><p>Deberán utilizarse las opciones incluidas en las listas desplegables, sin modificar la estructura, denominación ni formato de las columnas.</p><p>El relevamiento comprende a todos los proveedores contratados durante el período, independientemente de su origen y de que se encuentren certificados o no como proveedores rionegrinos.</p>
 <div class="callout info"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3 2.8 19h18.4L12 3Z"></path><path d="M12 9v4M12 16.5h.01"></path></svg><div><strong>Modalidad de presentación</strong><p>ACLARACIÓN: Modalidad de presentación. En la primera presentación correspondiente a cada proyecto, la empresa deberá seleccionar la opción “CARGAR: SÍ” y adjuntar la planilla “Proveedores” completa, con la totalidad de los proveedores, contratistas y contrataciones correspondientes al período informado.</p><p>A partir del trimestre siguiente, deberá seleccionar “CARGAR: NO” y registrar directamente en el formulario la información de los proveedores y las contrataciones correspondientes al período.</p></div></div>
-<p>Resguardo y difusión de la información. La información individual suministrada será resguardada por la Autoridad de Aplicación y utilizada para las tareas de relevamiento, seguimiento, verificación y control previstas en la normativa vigente. La difusión pública de los resultados se realizará únicamente en forma agregada o mediante compilaciones de conjunto, de modo que no resulte posible identificar, directa o indirectamente, a las empresas, proveedores o personas trabajadoras, ni revelar información comercial, privada o patrimonial, en concordancia con lo dispuesto por el artículo 9 de la Ley E Nº 10.</p>
+
 </section>
 <section class="section"><div class="section-header"><div class="section-num">2</div><div class="section-heading"><div class="section-title-text">Instrucciones para completar cada campo</div><div class="section-subtitle">Datos requeridos para cada contratación y proveedor.</div></div></div>
 <div class="fields"><div class="field"><div class="field-name">Empresa Operadora</div><div class="field-text">indicar la razón social completa de la empresa operadora responsable del proyecto.</div></div><div class="field"><div class="field-name">Proyecto</div><div class="field-text">consignar la denominación con la cual el proyecto se encuentra registrado o informado ante la autoridad competente. Se deberá utilizar la misma denominación en todas las entregas.</div></div><div class="field"><div class="field-name">Año informado</div><div class="field-text">indicar, con cuatro dígitos, el año al cual corresponde la información.</div></div><div class="field"><div class="field-name">Período informado</div><div class="field-text">seleccionar el trimestre correspondiente: 1.er trimestre, 2.º trimestre, 3.er trimestre o 4.º trimestre.</div></div><div class="field"><div class="field-name">Etapa asociada</div><div class="field-text">seleccionar la etapa del proyecto con la cual se vincula directamente la contratación informada. Las etapas incluidas en la lista desplegable contemplan las distintas industrias extractivas alcanzadas por el relevamiento. En el caso de la actividad minera, deberán seleccionarse únicamente las etapas aplicables al proyecto minero, de acuerdo con su estado de avance y con lo establecido en los artículos 50 y 51 del Código de Procedimientos Mineros de Río Negro. Cuando una contratación comprenda más de una etapa, deberá indicarse la etapa principal y aclararse esta circunstancia en “Observaciones”. Solo se utilizarán filas separadas cuando el monto pueda distribuirse entre las etapas sin duplicaciones.</div></div><div class="field"><div class="field-name">CUIT</div><div class="field-text">consignar el CUIT del proveedor, con once dígitos y sin guiones ni espacios. Para proveedores del exterior que no posean CUIT deberá informarse el identificador tributario equivalente, conforme al criterio que establezca la Autoridad de Aplicación.</div></div><div class="field"><div class="field-name">Razón Social</div><div class="field-text">indicar la razón social o nombre completo del proveedor, de acuerdo con su constancia de inscripción tributaria. La denominación informada deberá corresponderse con el CUIT consignado.</div></div><div class="field"><div class="field-name">Origen del proveedor</div><div class="field-text">seleccionar una de las opciones determinadas. La clasificación deberá realizarse considerando el domicilio fiscal o establecimiento operativo principal del proveedor y no el lugar en el cual se ejecuta el servicio. Las localidades comprendidas en el área de influencia deberán estar previamente definidas para cada proyecto.</div></div><div class="field"><div class="field-name">Categoría del proveedor</div><div class="field-text">La categoría deberá coincidir con el estado que figure en el Registro de Proveedores de Bienes, Servicios y Obras Rionegrino (Ley 5805 y reglamentado por el Decreto 618/2026) a la fecha de la contratación o emisión del comprobante. No deberá inferirse la categoría a partir del domicilio, origen o antigüedad del proveedor. La opción “No certificado” comprende a los proveedores que, a esa fecha, no cuenten con una certificación vigente, sin perjuicio de que se encuentren inscriptos, en proceso de inscripción o no registrados.</div></div><div class="field"><div class="field-name">Tipo de proveedor</div><div class="field-text">seleccionar la forma organizativa correspondiente. Cuando se seleccione “Otro”, deberá especificarse el tipo de proveedor en el campo “Observaciones”.</div></div><div class="field"><div class="field-name">Actividad principal</div><div class="field-text">consignar el código y la denominación de la actividad económica principal declarada por el proveedor ante ARCA. No deberá indicarse la actividad para la cual fue contratado, salvo que coincida con su actividad principal registrada.</div></div><div class="field"><div class="field-name">Rubro del bien, servicio u obra</div><div class="field-text">seleccionar el rubro que mejor represente el objeto principal de la contratación. Cuando se seleccione “Otros”, deberá identificarse el rubro concreto en “Breve descripción”.</div></div><div class="field"><div class="field-name">Breve descripción</div><div class="field-text">describir de manera breve y específica el bien adquirido, el servicio prestado o la obra ejecutada. Se deberán evitar expresiones genéricas como “servicios varios” u “otros trabajos”.</div></div><div class="field"><div class="field-name">Monto contratado</div><div class="field-text">consignar el monto de la contratación en pesos argentinos. El importe deberá informarse una sola vez, en el trimestre en el cual se formalizó la contratación o se emitió el comprobante, según corresponda.</div></div><div class="field"><div class="field-name">Tipo de cambio utilizado</div><div class="field-text">completar únicamente cuando la contratación haya sido acordada en moneda extranjera. Se deberá indicar el tipo de cambio aplicado para convertir el importe a pesos, junto con su fecha y fuente. Cuando la contratación esté expresada originalmente en pesos, consignar “No aplica”.</div></div><div class="field"><div class="field-name">Número de Comprobante/Contrato</div><div class="field-text">informar el número que permita identificar el contrato, orden de compra, factura u otro documento respaldatorio. Cuando no exista una numeración formal, deberá utilizarse una referencia interna que permita vincular el registro con la documentación de respaldo.</div></div><div class="field"><div class="field-name">Fecha de Comprobante/Contrato</div><div class="field-text">indicar la fecha de emisión o formalización del documento informado en la columna anterior.</div></div><div class="field"><div class="field-name">Observaciones</div><div class="field-text">utilizar este campo para aclarar situaciones particulares que resulten necesarias para interpretar correctamente la información. No deberá emplearse para reemplazar datos exigidos en otras columnas.</div></div></div>
 </section>
 </div></article><article class="instruction" id="licitaciones" role="tabpanel">
-<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Licitaciones</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I | Ley Provincial N.º 5805 y Decreto Reglamentario N.º 618/2026</div></div><div class="inst-actions"><a class="action-card action-primary" href="https://forms.gle/VSpLxbmkodpj3aeV9" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Completar en línea</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><a class="action-card action-download" href="Licitaciones.xlsx" download><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg></span><span class="action-copy"><strong>Excel</strong><small>Descargar plantilla</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button></div></div></div>
+<div class="inst-head"><div class="inst-head-top"><div class="inst-title-card"><div class="inst-kicker">Instructivo</div><h2><span class="inst-title-prefix">Planilla</span> <span class="inst-title-name">Carga Licitaciones</span></h2><div class="inst-law">Ley Q N° 5702 y Anexo I | Ley Provincial N.º 5805 y Decreto Reglamentario N.º 618/2026</div></div><div class="inst-actions"><a class="action-card action-primary" href="https://forms.gle/VSpLxbmkodpj3aeV9" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span><span class="action-copy"><strong>Formulario</strong><small>Completar en línea</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><a class="action-card action-secondary" href="https://docs.google.com/spreadsheets/d/1Irg1m65PPJ_RPirsTehIC7Edeqav37Bk/edit" rel="noopener noreferrer" target="_blank"><span class="action-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14a2 2 0 0 0 2-2v-3"></path><path d="M3 16v3a2 2 0 0 0 2 2"></path></svg></span><span class="action-copy"><strong>Planilla</strong><small>Abrir planilla compartida</small></span><span aria-hidden="true" class="action-end"><svg viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></span></a><button class="print-link" onclick="window.print()" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="7" width="12" x="6" y="14"></rect></svg><span>Imprimir instructivo</span></button></div></div></div>
 <div class="inst-body">
 <div class="key-wrap"><div class="key-wrap-title">Puntos clave de presentación</div><div class="key-grid"><div class="key-card blue"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><div><div class="key-label">Cuándo informar</div><p>La planilla deberá completarse cuando la empresa prevea realizar procesos de contratación o licitación. En cada presentación deberán informarse las licitaciones previstas para los próximos seis (6) meses, incluidas aquellas que aún no hayan sido formalmente convocadas. La información tendrá carácter proyectado y deberá actualizarse ante cambios en las fechas, el alcance o el estado del proceso.</p></div></div><div class="key-card green"><div class="key-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 7v5h-5"></path><path d="M4 17v-5h5"></path><path d="M6.1 9A7 7 0 0 1 18 7l2 5"></path><path d="M17.9 15A7 7 0 0 1 6 17l-2-5"></path></svg></div><div><div class="key-label">Actualización obligatoria</div><p>En cada entrega se incorporarán los procedimientos iniciados durante el período y se actualizarán aquellos informados previamente que permanezcan abiertos o en ejecución, hasta su finalización, cancelación, declaración de desierto o rescisión, según corresponda.</p></div></div></div></div>
 <section class="section"><div class="section-header"><div class="section-num">1</div><div class="section-heading"><div class="section-title-text">Objeto y alcance</div><div class="section-subtitle">Finalidad y alcance del relevamiento.</div></div></div>
 <p>La planilla tiene por objeto relevar y dar seguimiento a los procedimientos de contratación o licitación vinculados con los proyectos alcanzados, desde su planificación hasta la adjudicación, ejecución y finalización contractual. Comprende contrataciones de bienes, servicios y obras, cualquiera sea la modalidad utilizada por la empresa.</p>
 </section>
 <section class="section"><div class="section-header"><div class="section-num">2</div><div class="section-heading"><div class="section-title-text">Consideraciones generales</div><div class="section-subtitle">Reglas para registrar procedimientos y participantes.</div></div></div>
-<p>La información suministrada tendrá carácter de declaración jurada. La empresa declarante será responsable de su integridad, exactitud y veracidad. Los datos informados y su documentación respaldatoria podrán ser objeto de control, revisión, verificación, inspección o auditoría por parte de la Autoridad de Aplicación, que podrá requerir aclaraciones o documentación adicional.</p><p>Sin perjuicio de las facultades de control de la Autoridad de Aplicación, los datos serán resguardados conforme a las normas aplicables de confidencialidad y secreto estadístico, en particular la Ley Provincial E N. º 10. La publicación o difusión de resultados se realizará de manera agregada, evitando individualizar a las empresas o divulgar información comercial o patrimonial.</p><p>Deberán utilizarse las opciones de las listas desplegables y mantenerse sin modificaciones la estructura, el orden, la denominación y el formato de las columnas. Las fechas se informarán con formato día/mes/año y los CUIT se consignarán con once dígitos, sin guiones ni espacios.</p><p>Los montos se informarán en pesos argentinos y como valores numéricos. Cuando el procedimiento, la oferta o la adjudicación se encuentre expresado en moneda extranjera, se convertirá a pesos y se indicarán en “Observaciones” la moneda original, el tipo de cambio aplicado, su fecha y la fuente utilizada. Se mantendrá un criterio uniforme respecto de la inclusión o exclusión de impuestos y, cuando resulte necesario, se aclarará ese criterio en “Observaciones”.</p>
+<p>La empresa declarante será responsable de la integridad, exactitud y veracidad de los datos informados. La información y su documentación respaldatoria podrán ser objeto de control, revisión, verificación, inspección o auditoría por parte de la Autoridad de Aplicación, que podrá requerir aclaraciones o documentación adicional.</p><p>Deberán utilizarse las opciones de las listas desplegables y mantenerse sin modificaciones la estructura, el orden, la denominación y el formato de las columnas. Las fechas se informarán con formato día/mes/año y los CUIT se consignarán con once dígitos, sin guiones ni espacios.</p><p>Los montos se informarán en pesos argentinos y como valores numéricos. Cuando el procedimiento, la oferta o la adjudicación se encuentre expresado en moneda extranjera, se convertirá a pesos y se indicarán en “Observaciones” la moneda original, el tipo de cambio aplicado, su fecha y la fuente utilizada. Se mantendrá un criterio uniforme respecto de la inclusión o exclusión de impuestos y, cuando resulte necesario, se aclarará ese criterio en “Observaciones”.</p>
 <div class="callout info"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3 2.8 19h18.4L12 3Z"></path><path d="M12 9v4M12 16.5h.01"></path></svg><div><strong>Regla de registro</strong><p>Regla de registro. Cada fila representa la combinación entre un procedimiento y una empresa invitada u oferente. Si en un mismo procedimiento participan varias empresas, deberán utilizarse filas separadas, repitiendo los datos de identificación y planificación y consignando en cada fila una sola empresa, su CUIT, condición registral, cotización y resultado.</p></div></div>
 <p>Mientras el procedimiento se encuentre en planificación y todavía no existan empresas identificadas, podrá registrarse una sola fila con los campos de la sección “Proveedor participante / Contrato” sin completar. Una vez individualizadas las empresas, el procedimiento se desagregará en una fila por participante, manteniendo el mismo ID interno.</p><p>Cuando los datos de planificación se repitan por existir varios participantes, el monto estimado corresponde al procedimiento completo y no deberá sumarse tantas veces como filas tenga el procedimiento. El monto cotizado y el monto adjudicado, en cambio, corresponden a cada empresa participante.</p>
 </section>
@@ -915,29 +1393,189 @@ th{background:var(--rn-blue)}
 </section>
 </div></article></div>
 </main>
+
+
 <footer class="footer"><div class="footer-inner"><div><strong>Secretaría de Minería · Río Negro</strong><div>Instructivos digitales para cargas e informes.</div></div><a aria-label="Volver arriba" class="back-to-top" href="#top" title="Volver arriba">↑</a></div></footer>
 <script>
 const tabs=[...document.querySelectorAll('.tab')];
 const panels=[...document.querySelectorAll('.instruction')];
 const placeholder=document.getElementById('placeholder');
 const helper=document.getElementById('helper');
+const tabsWrap=document.querySelector('.tabs-wrap');
+const contentShell=document.getElementById('contentShell');
+const siteHeader=document.querySelector('.site-header');
+let sidebarScrollTick=false;
+
+function updateStickyOffset(){
+  const headerHeight=siteHeader ? siteHeader.getBoundingClientRect().height : 72;
+  document.documentElement.style.setProperty('--instruction-sticky-top',`${Math.ceil(headerHeight)+14}px`);
+}
+
 function selectTab(tab,scroll=false){
   const id=tab.dataset.target;
-  tabs.forEach(t=>{const active=t===tab;t.classList.toggle('active',active);t.setAttribute('aria-selected',active?'true':'false')});
+  tabs.forEach(t=>{
+    const active=t===tab;
+    t.classList.toggle('active',active);
+    t.setAttribute('aria-selected',active?'true':'false');
+  });
   panels.forEach(p=>p.classList.toggle('visible',p.id===id));
   placeholder.style.display='none';
-  helper.textContent='Seleccioná otro botón para cambiar de instructivo';
-  if(scroll && window.innerWidth<700){document.getElementById('contentShell').scrollIntoView({behavior:'smooth',block:'start'})}
+  helper.textContent='Usá el índice lateral para recorrer el instructivo o cerrarlo cuando termines.';
+  updateSidebarActive();
+  if(scroll && window.innerWidth<700){
+    contentShell.scrollIntoView({behavior:'smooth',block:'start'});
+  }
 }
+
+function closeInstruction(scroll=true){
+  tabs.forEach(t=>{
+    t.classList.remove('active');
+    t.setAttribute('aria-selected','false');
+  });
+  panels.forEach(p=>p.classList.remove('visible'));
+  placeholder.style.display='flex';
+  helper.textContent='Seleccioná un instructivo para ver el detalle de carga.';
+  if(scroll){
+    tabsWrap.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
+function makeSectionId(panelId,index){
+  return `${panelId}-seccion-${index+1}`;
+}
+
+function buildInstructionNavigation(panel){
+  const head=panel.querySelector('.inst-head');
+  const body=panel.querySelector('.inst-body');
+  const sections=[...panel.querySelectorAll('.inst-body > .section')];
+  if(!head || !body || !sections.length) return;
+
+  sections.forEach((section,index)=>{
+    if(!section.id) section.id=makeSectionId(panel.id,index);
+  });
+
+  /* Estructura de dos columnas: índice persistente + información. */
+  const layout=document.createElement('div');
+  layout.className='instruction-layout';
+
+  const sidebar=document.createElement('aside');
+  sidebar.className='instruction-sidebar';
+  sidebar.setAttribute('aria-label',`Navegación del instructivo ${panel.id}`);
+
+  const content=document.createElement('div');
+  content.className='instruction-content';
+
+  panel.insertBefore(layout,head);
+  layout.appendChild(sidebar);
+  layout.appendChild(content);
+  content.appendChild(head);
+  content.appendChild(body);
+
+  const nav=document.createElement('nav');
+  nav.className='instruction-index';
+  nav.setAttribute('aria-label',`Índice del instructivo ${panel.id}`);
+
+  const navHead=document.createElement('div');
+  navHead.className='instruction-index-head';
+  navHead.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg><span>Índice del instructivo</span>';
+  nav.appendChild(navHead);
+
+  const links=document.createElement('div');
+  links.className='instruction-index-links';
+
+  const home=document.createElement('a');
+  home.href=`#${panel.id}`;
+  home.className='instruction-index-link index-home is-active';
+  home.dataset.indexTarget='home';
+  home.innerHTML='<span class="instruction-index-number">↑</span><span>Inicio del instructivo</span>';
+  home.addEventListener('click',event=>{
+    event.preventDefault();
+    head.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  links.appendChild(home);
+
+  sections.forEach((section,index)=>{
+    const title=section.querySelector('.section-title-text')?.textContent?.trim() || `Sección ${index+1}`;
+    const link=document.createElement('a');
+    link.href=`#${section.id}`;
+    link.className='instruction-index-link';
+    link.dataset.indexTarget=section.id;
+    link.innerHTML=`<span class="instruction-index-number">${index+1}</span><span></span>`;
+    link.querySelector('span:last-child').textContent=title;
+    link.addEventListener('click',event=>{
+      event.preventDefault();
+      section.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    links.appendChild(link);
+  });
+
+  nav.appendChild(links);
+  sidebar.appendChild(nav);
+
+  const closeBtn=document.createElement('button');
+  closeBtn.type='button';
+  closeBtn.className='close-instruction';
+  closeBtn.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12"></path><path d="M18 6 6 18"></path></svg><span>Cerrar instructivo</span>';
+  closeBtn.addEventListener('click',()=>closeInstruction(true));
+  sidebar.appendChild(closeBtn);
+}
+
+function updateSidebarActive(){
+  const panel=panels.find(p=>p.classList.contains('visible'));
+  if(!panel) return;
+
+  const links=[...panel.querySelectorAll('.instruction-index-link')];
+  const sections=[...panel.querySelectorAll('.inst-body > .section')];
+  if(!links.length) return;
+
+  const stickyRaw=getComputedStyle(document.documentElement).getPropertyValue('--instruction-sticky-top');
+  const threshold=(parseFloat(stickyRaw)||88)+42;
+  let activeTarget='home';
+
+  sections.forEach(section=>{
+    if(section.getBoundingClientRect().top<=threshold){
+      activeTarget=section.id;
+    }
+  });
+
+  links.forEach(link=>link.classList.toggle('is-active',link.dataset.indexTarget===activeTarget));
+}
+
+panels.forEach(buildInstructionNavigation);
+updateStickyOffset();
+window.addEventListener('resize',()=>{
+  updateStickyOffset();
+  updateSidebarActive();
+});
+window.addEventListener('scroll',()=>{
+  if(sidebarScrollTick) return;
+  sidebarScrollTick=true;
+  requestAnimationFrame(()=>{
+    updateSidebarActive();
+    sidebarScrollTick=false;
+  });
+},{passive:true});
+
 tabs.forEach((tab,index)=>{
   tab.addEventListener('click',()=>selectTab(tab,true));
   tab.addEventListener('keydown',e=>{
     if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
-      e.preventDefault();const dir=e.key==='ArrowRight'?1:-1;const next=(index+dir+tabs.length)%tabs.length;tabs[next].focus();selectTab(tabs[next]);
+      e.preventDefault();
+      const dir=e.key==='ArrowRight'?1:-1;
+      const next=(index+dir+tabs.length)%tabs.length;
+      tabs[next].focus();
+      selectTab(tabs[next]);
     }
   });
 });
 
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape' && panels.some(p=>p.classList.contains('visible'))){
+    const activeTab=tabs.find(t=>t.classList.contains('active'));
+    closeInstruction(false);
+    if(activeTab) activeTab.focus();
+  }
+});
 </script>
 <script data-scroll-top="true">
 document.querySelectorAll('a[href="#top"]').forEach(link=>{
