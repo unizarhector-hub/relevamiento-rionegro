@@ -1579,6 +1579,11 @@ document.addEventListener('keydown',event=>{
     if(activeTab) activeTab.focus();
   }
 });
+
+if(tabs.length){
+  selectTab(tabs[0]);
+}
+
 </script>
 <script data-scroll-top="true">
 document.querySelectorAll('a[href="#top"]').forEach(link=>{
