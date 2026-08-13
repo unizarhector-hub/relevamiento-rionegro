@@ -1416,7 +1416,8 @@ function selectTab(tab,scroll=false){
     t.setAttribute('aria-selected',active?'true':'false');
   });
   panels.forEach(p=>p.classList.toggle('visible',p.id===id));
-  placeholder.style.display='none';
+  if(placeholder) placeholder.style.display='none';
+  if(contentShell) contentShell.style.display='block';
   if(helper) helper.textContent='Usá el índice lateral para recorrer el instructivo o cerrarlo cuando termines.';
   updateSidebarActive();
   if(scroll && window.innerWidth<700){
@@ -1430,7 +1431,8 @@ function closeInstruction(scroll=true){
     t.setAttribute('aria-selected','false');
   });
   panels.forEach(p=>p.classList.remove('visible'));
-  placeholder.style.display='flex';
+  if(placeholder) placeholder.style.display='none';
+  if(contentShell) contentShell.style.display='none';
   if(helper) helper.textContent='Seleccioná un instructivo para ver el detalle de carga.';
   if(scroll){
     tabsWrap.scrollIntoView({behavior:'smooth',block:'start'});
@@ -1540,6 +1542,7 @@ function updateSidebarActive(){
 
 panels.forEach(buildInstructionNavigation);
 updateStickyOffset();
+if(contentShell) contentShell.style.display='none';
 window.addEventListener('resize',()=>{
   updateStickyOffset();
   updateSidebarActive();
